@@ -26,4 +26,4 @@
 ![alt text](https://github.com/JissatsU/AbuseIPDB/blob/master/test4.jpg)
 
 ## Contact
-* For any improvements contact me on [F](https://www.facebook.com/svz.17B)
+* For any improvements contact me on [Facebook](https://www.facebook.com/svz.17B)
