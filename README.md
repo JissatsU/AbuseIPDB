@@ -10,7 +10,7 @@
                          the reporter's user id number (0 if reported anonymously)
 ```
 
-## Note
+# Note
 * Comments must be less than 1500 characters. Please only provide relevant information (not entire log dumps). Be sure to remove Personally Identifiable Information (PII) from your comments if you wish to remain anonymous.
 
 * In addition to the monthly rate limit, all accounts are limited to 60 requests per minute.
