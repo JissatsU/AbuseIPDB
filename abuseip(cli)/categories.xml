@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<categories>
+    <category id="3">
+	    <Name>Fraud Orders</Name>
+	    <Description>
+		    Fraudent orders.
+	    </Description>
+    </category>
+
+    <category id="4">
+	    <Name>DDoS Attack</Name>
+	    <Description>
+		    Participating in distributed denial-of-service (usually part of botnet).
+	    </Description>
+    </category>
+
+    <category id="5">
+	    <Name>FTP Brute-Force</Name>
+	    <Description>None</Description>
+    </category>
+
+    <category id="6">
+	    <Name>Ping of Death</Name>
+	    <Description>
+		    Oversized IP packet.
+	    </Description>
+    </category>
+
+    <category id="7">
+	    <Name>Phishing</Name>
+	    <Description>
+		    Phishing websites and/or email.
+	    </Description>
+    </category>
+
+    <category id="8">
+	    <Name>Fraud VoIP</Name>
+	    <Description>None</Description>
+    </category>
+
+    <category id="9">
+	    <Name>Open Proxy</Name>
+	    <Description>
+		    Open proxy, open relay, or Tor exit node.
+	    </Description>
+    </category>
+
+    <category id="10">
+	    <Name>Web Spam</Name>
+	    <Description>
+		    Comment/forum spam, HTTP referer spam, or other CMS spam.
+	    </Description>
+    </category>
+
+    <category id="11">
+	    <Name>Email Spam</Name>
+	    <Description>
+		    Spam email content, infected attachments, phishing emails, and spoofed senders (typically via exploited host or SMTP server abuse). Note: Limit comments to only relevent information (instead of log dumps) and be sure to remove PII if you want to remain anonymous.
+	    </Description>
+    </category>
+
+    <category id="12">
+	    <Name>Blog Spam</Name>
+	    <Description>
+		    CMS blog comment spam.
+	    </Description>
+    </category>
+
+    <category id="13">
+	    <Name>VPN IP</Name>
+	    <Description>
+		    Conjunctive category.
+	    </Description>
+    </category>
+
+    <category id="14">
+	    <Name>Port Scan</Name>
+	    <Description>
+		    Scanning for open ports and vulnerable services.
+	    </Description>
+    </category>
+
+    <category id="15">
+	    <Name>Hacking</Name>
+	    <Description>None</Description>
+    </category>
+
+    <category id="16">
+	    <Name>SQL Injection</Name>
+		<Description>
+			Attempts at SQL injection.
+		</Description>
+    </category>
+
+    <category id="17">
+	    <Name>Spoofing</Name>
+	    <Description>None</Description>
+    </category>
+
+    <category id="18">
+	    <Name>Brute-Force</Name>
+		<Description>
+			Credential brute-force attacks on webpage logins and services like SSH, FTP, SIP, SMTP, RDP, etc. This category is seperate from DDoS attacks.
+		</Description>
+    </category>
+
+    <category id="19">
+	    <Name>Bad Web Bot</Name>
+		<Description>
+			Webpage scraping (for email addresses, content, etc) and crawlers that do not honor robots.txt. Excessive requests and user agent spoofing can also be reported here.
+		</Description>
+    </category>
+
+    <category id="20">
+	    <Name>Exploited Host</Name>
+		<Description>
+			Host is likely infected with malware and being used for other attacks or to host malicious content. The host owner may not be aware of the compromise. This category is often used in combination with other attack categories.
+		</Description>
+    </category>
+
+    <category id="21">
+	    <Name>Web App Attack</Name>
+		<Description>
+			Attempts to probe for or exploit installed web applications such as a CMS like WordPress/Drupal, e-commerce solutions, forum software, phpMyAdmin and various other software plugins/solutions.
+		</Description>
+    </category>
+
+    <category id="22">
+	    <Name>SSH</Name>
+		<Description>
+			Secure Shell (SSH) abuse. Use this category in combination with more specific categories.
+		</Description>
+    </category>
+
+    <category id="23">
+	    <Name>IoT Targeted</Name>
+		<Description>
+			Abuse was targeted at an "Internet of Things" type device. Include information about what type of device was targeted in the comments.
+		</Description>
+    </category>
+</categories>
