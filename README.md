@@ -1,6 +1,6 @@
 # AbuseIPDB
 
-* Right now this is the cli version, so it wasn't meant to be integrable.
+* Currently, only the cli version is available, so you wont be able to integrate the scrip anywhere... I guess...
 
 ## Usage
  * Options
