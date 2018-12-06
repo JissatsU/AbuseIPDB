@@ -93,14 +93,13 @@ function parse_agents( string $agentsFile ) : array
 
 function parse_options( int $argc, array $argv ) : object
 {	
-    $api_key = "";
-    $verbose = False;
-    $arg_N   = "";	# argument name
-    $arg_V   = "";	# argument value
-    $opts    = array();
+       $api_key = "";
+       $verbose = False;
+       $arg_N   = "";	# argument name
+       $arg_V   = "";	# argument value
+       $opts    = array();
 	
-	if( $argc > 3 )
-	{
+	if( $argc > 3 ){
 		die( "\x0a" . RED . "[ERROR]" . NONE . " - Too many arguments!\x0a" );
 	}
 
@@ -135,11 +134,11 @@ function init_req( string $url )
 	$agents  = parse_agents( 'u-agents.dat' );
 	$curl    = curl_init( $url );
 	$options = array(
-		  	CURLOPT_USERAGENT       => $agents[ mt_rand( 0, sizeof( $agents ) - 1 ) ],
-			CURLOPT_HEADER          => 0,
-			CURLOPT_HTTPHEADER      => array( 'Accept: application/json' ),
-			CURLOPT_HTTP_VERSION    => CURL_HTTP_VERSION_1_1,
-			CURLOPT_FRESH_CONNECT   => 1,
+		  	CURLOPT_USERAGENT       => $agents[ mt_rand( 0, sizeof( $agents ) - 1 ) ], # random user-agent
+			CURLOPT_HEADER          => 0,                                              # do not display headers
+			CURLOPT_HTTPHEADER      => array( 'Accept: application/json' ), 
+			CURLOPT_HTTP_VERSION    => CURL_HTTP_VERSION_1_1,                          # force HTTP/1.1
+			CURLOPT_FRESH_CONNECT   => 1,                                              # do not use a cached connection
 			CURLOPT_SSL_VERIFYPEER  => 1,
 			CURLOPT_SSL_VERIFYHOST  => 2,
 			CURLOPT_RETURNTRANSFER  => true
@@ -225,13 +224,11 @@ function main( int $argc, array $argv ) : void
 	{	
 		$optNum = get_opt_num();
 
-		if( $optNum > 4 || $optNum <= 0 )
-		{
+		if( $optNum > 4 || $optNum <= 0 ){
 			die( "\x0a" . RED . "[ERROR] - " . NONE . "Invalid option!\x0a" );
 		}
 
-		if( $optNum == 1 )
-		{
+		if( $optNum == 1 ){
 			display_categories( $categories ); if( !go_back() ) { exit; }
 		}
 		
