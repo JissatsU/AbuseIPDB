@@ -101,11 +101,10 @@ function parse_options( int $argc, array $argv ) : object
 	if( $argc > 3 ){
 		die( "\x0a" . RED . "[ERROR]" . NONE . " - Too many arguments!\x0a" );
 	}
-
+	
 	while( ( $argc-- ) > 1 )
 	{	
-		if( strpos( $argv[ $argc ], "=" ) !== False )
-		{
+		if( strpos( $argv[ $argc ], "=" ) !== False ){
 			$arg_N = @explode( "=", $argv[ $argc ] )[0];
 			$arg_V = @explode( "=", $argv[ $argc ] )[1];
 		}
@@ -243,8 +242,7 @@ function main( int $argc, array $argv ) : void
 			echo "  [".BLUE."3".NONE."] Check CIDR\x0a";
 			$action = choose_action( );
 			
-			if( ( $action <= 0 ) || ( $action > 3 ) )
-			{
+			if( ( $action <= 0 ) || ( $action > 3 ) ){
 				die( "\x0a" . RED . "[ERROR] - " . NONE . "Action not supported!\x0a" );
 			}
 
@@ -257,8 +255,7 @@ function main( int $argc, array $argv ) : void
 				$url  = ($GLOBALS['urls'])->report_ip;
 				$resp = report_abuser( $url, $opts->api_key, $ip, $categ, $comment );
 
-				if( !is_array( $resp ) && $resp->success )
-				{
+				if( !is_array( $resp ) && $resp->success ){
 					echo "\n" . GREEN . "[".RED."*".NONE.GREEN."] ".NONE."IP      - " . $resp->ip;
 					echo "\n" . GREEN . "[".RED."*".NONE.GREEN."] ".NONE."SUCCESS - " . $resp->success;
 					echo "\n";
@@ -268,7 +265,6 @@ function main( int $argc, array $argv ) : void
 					foreach( ( $resp[0] ) as $k => $v )
 					{	
 						$tab =  ( $k == "id" ) ? "\t\t" : "\t" ;
-
 						if      ( $k == "links"   ) echo "\n" . GREEN . "[".RED."*".NONE.GREEN."] ".NONE. strtoupper( $k ) ."$tab- ".RED. $v->about;
 						else if ( $k == "source"  ) echo "\n" . GREEN . "[".RED."*".NONE.GREEN."] ".NONE. strtoupper( $k ) ."$tab- ".RED. $v->parameter;
 						else                        echo "\n" . GREEN . "[".RED."*".NONE.GREEN."] ".NONE. strtoupper( $k ) ."$tab- ".RED. $v;
@@ -294,9 +290,8 @@ function main( int $argc, array $argv ) : void
 						{	
 							$tab     =  ( $k == "id" || $k == "ip" )     ? "\t\t\t  " : "\t\t  " ;
 							$percent =  ( $k == "abuseConfidenceScore" ) ? "%"        : "" ;
-
-							if      ( $k == "isWhitelisted" )        $tab = "\t  ";
-							else if ( $k == "abuseConfidenceScore" ) $tab = "  ";
+							if          ( $k == "isWhitelisted" )        $tab = "\t  ";
+							else if     ( $k == "abuseConfidenceScore" ) $tab = "  ";
 	
 							if      ( $k == "links"    )   echo "\n" . GREEN . "[".RED."*".NONE.GREEN."] ".NONE. strtoupper( $k ) ."$tab- ".RED. $v->about;
 							else if ( $k == "source"   )   echo "\n" . GREEN . "[".RED."*".NONE.GREEN."] ".NONE. strtoupper( $k ) ."$tab- ".RED. $v->parameter;
