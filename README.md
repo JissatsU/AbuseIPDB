@@ -10,6 +10,9 @@
                          the reporter's user id number (0 if reported anonymously)
 ```
 
+## Note
+* Comments must be less than 1500 characters. Please only provide relevant information (not entire log dumps). Be sure to remove Personally Identifiable Information (PII) from your comments if you wish to remain anonymous.
+
 ## API
 * Generate API KEY [here](https://www.abuseipdb.com/api.html)
 
