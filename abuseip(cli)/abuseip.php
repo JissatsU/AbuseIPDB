@@ -4,7 +4,6 @@
 @define( "RED",      "\033[5;31m" );
 @define( "GREEN",    "\033[5;32m" );
 @define( "NONE",     "\033[0m" );
-@define( "OS",       PHP_OS );
 @define( "ARGS",     array( "--api-key", "--verbose" ) );
 @define( "CATFILE" , "categories.xml" );
 
