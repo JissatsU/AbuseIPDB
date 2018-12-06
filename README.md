@@ -5,7 +5,7 @@
 ## Usage
  * Options
 ```
---api-key=[YOUR KEY]
+--api-key=[YOUR KEY]  -  Generate API KEY [here](https://www.abuseipdb.com/api.html)
 --verbose [OPTIONAL]  -  When used, reports will include the comment (if any) and 
                          the reporter's user id number (0 if reported anonymously)
 ```
