@@ -113,8 +113,7 @@ function parse_options( int $argc, array $argv ) : object
 			$arg_N = $argv[ $argc ];
 		}
 
-		if( !in_array( $arg_N, ARGS ) )
-		{
+		if( !in_array( $arg_N, ARGS ) ){
 			die( "\x0a" . RED . "[ERROR]" . NONE . " - Invalid argument found! -> $arg_N\x0a" );
 		}
 
@@ -213,8 +212,7 @@ function main( int $argc, array $argv ) : void
 	$opts        = parse_options( $argc, $argv );
 	$categories  = parse_categories( CATFILE );
 
-	if( $opts->api_key == NULL )
-	{
+	if( $opts->api_key == NULL ){
 		die( "\x0a" . RED . "[ERROR] - " . NONE . "No api key found!\x0a" );
 	}
 
@@ -288,8 +286,7 @@ function main( int $argc, array $argv ) : void
 				$url  = ( $GLOBALS['urls'] )->check_ip;
 				$resp = get_abuser_info( $url, $opts->api_key, $ip, (int) $days );
 
-				if( is_array( $resp ) )
-				{
+				if( is_array( $resp ) ){
 					for( $i = 0 ; $i < sizeof( $resp ) ; $i++ )
 					{	
 						echo "\n";
@@ -336,8 +333,7 @@ function main( int $argc, array $argv ) : void
 				$url     = ( $GLOBALS['urls'] )->cidr_check;
 				$resp    = check_cidr( $url, $opts->api_key, $network, $days );
 
-				if( is_array( $resp ) && ($resp[0])->id )
-				{
+				if( is_array( $resp ) && ($resp[0])->id ){
 					foreach( ($resp[0]) as $errKey => $errVal )
 					{
 						$tab =  ( $errKey == "id" ) ? "\t\t" : "\t" ;
@@ -352,8 +348,7 @@ function main( int $argc, array $argv ) : void
 				else{
 					foreach( $resp as $succKey => $succVal )
 					{	
-						if( is_array( $succVal ) )
-						{
+						if( is_array( $succVal ) ){
 							for( $i = 0 ; $i < sizeof( $succVal ) ; $i++ )
 							{
 								echo "\n";
