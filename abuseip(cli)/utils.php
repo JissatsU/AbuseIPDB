@@ -1,5 +1,4 @@
 <?php 
-#zzzzzz
 
 if( @version_compare( PHP_VERSION, '7.1.0' ) < 1 )
 {
