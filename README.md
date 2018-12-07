@@ -11,6 +11,7 @@
 
 ## Example
 ```
+cd path/to/AbuseIPDB/abuseip'(cli)'
 php abuseip.php --api-key=XXXXXXXXXXXXXXXXXX --verbose
 ```
 
