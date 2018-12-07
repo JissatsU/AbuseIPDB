@@ -279,11 +279,9 @@ function main( int $argc, array $argv ) : void
 				$resp = get_abuser_info( $url, $opts->api_key, $ip, (int) $days, $opts->verbose );
 
 				if( is_array( $resp ) ){
-					for( $i = 0 ; $i < sizeof( $resp ) ; $i++ )
-					{	
+					for( $i = 0 ; $i < sizeof( $resp ) ; $i++ ){	
 						echo "\n";
-						foreach( ( $resp[ $i ] ) as $k => $v )
-						{	
+						foreach( ( $resp[ $i ] ) as $k => $v ){	
 							$tab     =  ( $k == "id" || $k == "ip" )     ? "\t\t\t  " : "\t\t  " ;
 							$percent =  ( $k == "abuseConfidenceScore" ) ? "%"        : "" ;
 							if          ( $k == "isWhitelisted" )        $tab = "\t  ";
