@@ -1,5 +1,4 @@
 # AbuseIPDB
-* aa
 * Currently, only the cli version is available, so the script shouldn't be integrable.
 
 ## Usage
