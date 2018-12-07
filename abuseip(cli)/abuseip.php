@@ -156,7 +156,7 @@ function report_abuser( string $url, string $api_key, string $ip, string $catego
 	return $resp;
 }
 
-function get_abuser_info( string $url, string $api_key, string $ip, int $days )
+function get_abuser_info( string $url, string $api_key, string $ip, int $days, string $verbose )
 {
 	$queryString = "";
 	$queryString = http_build_query( array( 
@@ -164,7 +164,7 @@ function get_abuser_info( string $url, string $api_key, string $ip, int $days )
 				   "days"  => $days
 	) );
 	$url  = $url . $ip . "/json?";
-	$prep = init_req( $url . $queryString );
+	$prep = ( $verbose == "" || $verbose == NULL ) ? init_req( $url . $queryString ) : init_req( $url . $queryString . "&verbose" ) ;
 	$resp = json_decode( curl_exec( $prep ) );
 	return $resp;
 }
@@ -280,7 +280,7 @@ function main( int $argc, array $argv ) : void
 				$days = get_days();
 				
 				$url  = ( $GLOBALS['urls'] )->check_ip;
-				$resp = get_abuser_info( $url, $opts->api_key, $ip, (int) $days );
+				$resp = get_abuser_info( $url, $opts->api_key, $ip, (int) $days, $opts->verbose );
 
 				if( is_array( $resp ) ){
 					for( $i = 0 ; $i < sizeof( $resp ) ; $i++ )
