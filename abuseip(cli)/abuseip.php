@@ -114,8 +114,8 @@ function parse_options( int $argc, array $argv ) : object
 			die( "\x0a" . RED . "[ERROR]" . NONE . " - Invalid argument found! -> $arg_N\x0a" );
 		}
 
-		if( $arg_N == ARGS[0] && $arg_V != "" ) { $api_key = $arg_V; }
-		if( $arg_N == ARGS[1] )                 { $verbose = True; }
+		if( $arg_N == ARGS[0] && $arg_V != "" )  $api_key = $arg_V;
+		if( $arg_N == ARGS[1] )                  $verbose = True;
 	}
 	
 	$opts['api_key'] = $api_key;
