@@ -189,8 +189,7 @@ function get_recently_reported( string $url ) : void
 
 	for( $i = 0 ; $i < sizeof( $resp ); $i++ )
 	{
-		if( preg_match( ( $GLOBALS['REGEX'] )[1], $resp[$i] ) )
-		{	
+		if( preg_match( ( $GLOBALS['REGEX'] )[1], $resp[$i] ) ){	
 			$ip = substr( $resp[$i], strpos( $resp[$i], ">" ) + 1 );
 			echo "  ".RED."[*]".NONE." ".BLUE."-".NONE." " . substr( $ip, 0, strpos( $ip, "</" ) ) . "\n";
 		}
