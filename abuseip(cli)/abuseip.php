@@ -327,8 +327,7 @@ function main( int $argc, array $argv ) : void
 				$resp    = check_cidr( $url, $opts->api_key, $network, $days );
 
 				if( is_array( $resp ) && ($resp[0])->id ){
-					foreach( ($resp[0]) as $errKey => $errVal )
-					{
+					foreach( ($resp[0]) as $errKey => $errVal ){
 						$tab =  ( $errKey == "id" ) ? "\t\t" : "\t" ;
 
 						if      ( $errKey == "links"   ) echo "\n" . GREEN . "[".RED."*".NONE.GREEN."] ".NONE. strtoupper( $errKey ) ."$tab- ".RED. $errVal->about;
@@ -339,14 +338,12 @@ function main( int $argc, array $argv ) : void
 					if( !go_back() ) { exit; }
 				}
 				else{
-					foreach( $resp as $succKey => $succVal )
-					{	
+					foreach( $resp as $succKey => $succVal ){	
 						if( is_array( $succVal ) ){
 							for( $i = 0 ; $i < sizeof( $succVal ) ; $i++ )
 							{
 								echo "\n";
-								foreach( $succVal[ $i ] as $key => $val )
-								{
+								foreach( $succVal[ $i ] as $key => $val ){
 									echo "\n" . GREEN . "[".RED."*".NONE.GREEN."] ".NONE. strtoupper( $key ) ." - ".RED. $val;
 								}
 							}
