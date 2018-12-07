@@ -63,8 +63,7 @@ function parse_categories( string $file ) : array
 	$data       = new SimpleXMLElement( $categories );
 
 	$categories = $data->category;
-	for( $i = 0 ; $i < sizeof( $categories ) ; $i++ )
-	{
+	for( $i = 0 ; $i < sizeof( $categories ) ; $i++ ){
 		$result[$i]['id']   = $categories[$i]['id'];
 		$result[$i]['name'] = ltrim( ($categories[$i])->Name );
 		$result[$i]['desc'] = ltrim( ($categories[$i])->Description );
@@ -102,8 +101,7 @@ function parse_options( int $argc, array $argv ) : object
 		die( "\x0a" . RED . "[ERROR]" . NONE . " - Too many arguments!\x0a" );
 	}
 	
-	while( ( $argc-- ) > 1 )
-	{	
+	while( ( $argc-- ) > 1 ){	
 		if( strpos( $argv[ $argc ], "=" ) !== False ){
 			$arg_N = @explode( "=", $argv[ $argc ] )[0];
 			$arg_V = @explode( "=", $argv[ $argc ] )[1];
