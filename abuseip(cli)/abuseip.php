@@ -298,8 +298,7 @@ function main( int $argc, array $argv ) : void
 				}
 				else{
 					echo "\n";
-					foreach( ( $resp ) as $k => $v )
-					{	
+					foreach( ( $resp ) as $k => $v ){	
 						$tab     =  ( $k == "id" || $k == "ip" )         ? "\t\t\t  " : "\t\t  " ;
 						$percent =  ( $k == "abuseConfidenceScore" )     ? "%"        : "" ;
 
@@ -338,8 +337,7 @@ function main( int $argc, array $argv ) : void
 				else{
 					foreach( $resp as $succKey => $succVal ){	
 						if( is_array( $succVal ) ){
-							for( $i = 0 ; $i < sizeof( $succVal ) ; $i++ )
-							{
+							for( $i = 0 ; $i < sizeof( $succVal ) ; $i++ ){
 								echo "\n";
 								foreach( $succVal[ $i ] as $key => $val ){
 									echo "\n" . GREEN . "[".RED."*".NONE.GREEN."] ".NONE. strtoupper( $key ) ." - ".RED. $val;
