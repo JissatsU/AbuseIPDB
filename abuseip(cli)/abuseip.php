@@ -233,8 +233,8 @@ function main( int $argc, array $argv ) : void
 		else if( $optNum == 3 )
 		{	
 			echo NONE . "\n";
-			echo "  [".BLUE."1".NONE."] Report IP\x0a";
-			echo "  [".BLUE."2".NONE."] Check IP\x0a";
+			echo "  [".BLUE."1".NONE."] Report IP \x0a";
+			echo "  [".BLUE."2".NONE."] Check IP  \x0a";
 			echo "  [".BLUE."3".NONE."] Check CIDR\x0a";
 			$action = choose_action( );
 			
