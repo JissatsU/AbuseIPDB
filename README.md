@@ -32,4 +32,4 @@ php abuseip.php --api-key=XXXXXXXXXXXXXXXXXX --verbose
 ![alt text](https://github.com/JissatsU/AbuseIPDB/blob/master/test5.jpg)
 
 ## Contact
-* For improvements contact me on [fb](https://www.facebook.com/svz.17B)
+* [fb](https://www.facebook.com/svz.17B)
