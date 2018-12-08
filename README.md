@@ -30,6 +30,3 @@ php abuseip.php --api-key=XXXXXXXXXXXXXXXXXX --verbose
 ![alt text](https://github.com/JissatsU/AbuseIPDB/blob/master/test3.jpg)
 ![alt text](https://github.com/JissatsU/AbuseIPDB/blob/master/test4.jpg)
 ![alt text](https://github.com/JissatsU/AbuseIPDB/blob/master/test5.jpg)
-
-## Contact
-* [fb](https://www.facebook.com/svz.17B)
