@@ -223,15 +223,13 @@ function main( int $argc, array $argv ) : void
 			display_categories( $categories ); if( !go_back() ) { exit; }
 		}
 		
-		else if( $optNum == 2 )
-		{	
+		else if( $optNum == 2 ){	
 			$url = ( $GLOBALS['urls'] )->home;
 			echo "\n";
 			get_recently_reported( $url ); if( !go_back() ) { exit; }
 		}
 
-		else if( $optNum == 3 )
-		{	
+		else if( $optNum == 3 ){	
 			echo NONE . "\n";
 			echo "  [".BLUE."1".NONE."] Report IP \x0a";
 			echo "  [".BLUE."2".NONE."] Check IP  \x0a";
@@ -242,8 +240,7 @@ function main( int $argc, array $argv ) : void
 				die( "\x0a" . RED . "[ERROR] - " . NONE . "Action not supported!\x0a" );
 			}
 
-			if( $action == 1 )
-			{	
+			if( $action == 1 ){	
 				$ip      = get_ip();
 				$categ   = get_categories();
 				$comment = get_comment();
@@ -270,8 +267,7 @@ function main( int $argc, array $argv ) : void
 				}
 			}
 			
-			else if( $action == 2 )
-			{
+			else if( $action == 2 ){
 				$ip   = get_ip();
 				$days = get_days();
 				
