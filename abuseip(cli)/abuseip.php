@@ -255,8 +255,7 @@ function main( int $argc, array $argv ) : void
 					if( !go_back() ) { exit; }
 				}
 				else{
-					foreach( ( $resp[0] ) as $k => $v )
-					{	
+					foreach( ( $resp[0] ) as $k => $v ){	
 						$tab =  ( $k == "id" ) ? "\t\t" : "\t" ;
 						if      ( $k == "links"   ) echo "\n" . GREEN . "[".RED."*".NONE.GREEN."] ".NONE. strtoupper( $k ) ."$tab- ".RED. $v->about;
 						else if ( $k == "source"  ) echo "\n" . GREEN . "[".RED."*".NONE.GREEN."] ".NONE. strtoupper( $k ) ."$tab- ".RED. $v->parameter;
@@ -309,8 +308,7 @@ function main( int $argc, array $argv ) : void
 				if( !go_back() ) { exit; }
 			}
 			
-			else if( $action == 3 )
-			{
+			else if( $action == 3 ){
 				$network = get_network( );
 				$days    = get_days( );
 
