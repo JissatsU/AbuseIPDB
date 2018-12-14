@@ -74,8 +74,7 @@ function parse_categories( string $file ) : array
 function display_categories( array $categories ) : void
 {	
 	$i = -1;
-	while( ($i++) < sizeof( $categories ) - 1 )
-	{	
+	while( ($i++) < sizeof( $categories ) - 1 ){	
 		echo ( $i == 0 ) ? "\n" : "" ;
 		echo GREEN . "  [".RED."ID".NONE.GREEN."]    - " . NONE . ( (object) $categories[ $i ] )->id   . "\x0a";
 		echo GREEN . "  [".RED."NAME".NONE.GREEN."]  - " . NONE . ( (object) $categories[ $i ] )->name . "\x0a";
