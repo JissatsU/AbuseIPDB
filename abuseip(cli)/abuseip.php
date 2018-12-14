@@ -210,8 +210,7 @@ function main( int $argc, array $argv ) : void
 		die( "\x0a" . RED . "[ERROR] - " . NONE . "No api key found!\x0a" );
 	}
 
-	while( $optNum != 4 )
-	{	
+	while( $optNum != 4 ){	
 		$optNum = get_opt_num();
 
 		if( $optNum > 4 || $optNum <= 0 ){
