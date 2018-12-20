@@ -41,7 +41,7 @@ $banner = RED . "
              `-._,-'   `-._______,-'   `-._,-'
 
                       [ AbuseIPDB ]
-                       By: scVnner
+                       By: killua
 ".NONE."
 [".RED."+".NONE."] Options
 
